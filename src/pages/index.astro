@@ -1,0 +1,245 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import ContactCard from "../components/ContactCard.astro";
+import Profile from "../components/Profile.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Education from "../components/Education.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import "../styles/global.css";
+
+const { PDF_VIEW } = import.meta.env;
+---
+
+<BaseLayout>
+  <Header />
+  <ContactCard />
+  <div class="grid grid-cols-3 gap-10 print:gap-4">
+    <section class="col-span-3 mt-8 first:mt-0 md:col-span-2 print:col-span-2">
+      <Profile />
+      <section class="col-span-3 mt-8 first:mt-0" id="education">
+        <h2
+          class="text-sm2 mb-4 font-bold tracking-widest text-purple-700 uppercase print:mb-2"
+        >
+          Education
+        </h2>
+        <Education />
+      </section>
+      <Experience />
+    </section>
+    <section class="col-span-3 md:col-span-1 print:col-span-1">
+      <!-- Skills Section -->
+      <section class="col-span-1 mt-8 first:mt-0" id="skills">
+        <h2
+          class="text-sm2 mb-4 font-bold tracking-widest text-purple-700 print:mb-2"
+        >
+          SKILLS
+        </h2>
+        <!-- Programming Languages -->
+        <section class="mb-1.5" id="programming-languages">
+          <header>
+            <h3
+              class="leading-snugish text-sm font-semibold text-gray-700 print:text-sm"
+            >
+              Programming &amp; Languages
+            </h3>
+          </header>
+          <div class="my-2.5 last:pb-1.5 print:my-1.5">
+            <ul class="text-md -mr-1.6 -mb-1.6 flex flex-wrap leading-relaxed">
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Typescript
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Javascript (ES6+)
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Node
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                SQL
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                HTML
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                CSS/Sass
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End Programming Languages -->
+
+        <!-- Libraries & Frameworks -->
+        <section class="mb-1.5" id="libraries-frameworks">
+          <header>
+            <h3
+              class="leading-snugish text-sm font-semibold text-gray-700 print:text-sm"
+            >
+              Libraries &amp; Frameworks
+            </h3>
+          </header>
+          <div class="my-2.5 last:pb-1.5 print:my-1.5">
+            <ul class="text-md -mr-1.6 -mb-1.6 flex flex-wrap leading-relaxed">
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                React
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Angular
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Remix
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Redux
+              </li>
+
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Express
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End Libraries & Frameworks -->
+        <!-- Test Runners -->
+        <section class="mb-1.5" id="test-runners-libraries">
+          <header>
+            <h3
+              class="leading-snugish text-sm font-semibold text-gray-700 print:text-sm"
+            >
+              Test Runners &amp; Libraries
+            </h3>
+          </header>
+          <div class="my-2.5 last:pb-1.5 print:my-1.5">
+            <ul class="text-md -mr-1.6 -mb-1.6 flex flex-wrap leading-relaxed">
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Jest
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Puppeteer
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End Test Runners -->
+        <!-- Tools | Platforms | Services -->
+        <section class="mb-1.5" id="tools-services">
+          <header>
+            <h3
+              class="leading-snugish text-sm font-semibold text-gray-700 print:text-sm"
+            >
+              Tools | Services | Database
+            </h3>
+          </header>
+          <div class="my-2.5 last:pb-1.5 print:my-1.5">
+            <ul class="text-md -mr-1.6 -mb-1.6 flex flex-wrap leading-relaxed">
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Git / Bash / Shells
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Eslint
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                CI / CD
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Husky - Git Hooks
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Docker
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                AWS
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                PostgreSQL
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End Tools | Platforms | Services -->
+
+        <!-- Related Skills -->
+        <section class="mb-1.5" id="related-skills">
+          <header>
+            <h3
+              class="leading-snugish text-sm font-semibold text-gray-700 print:text-sm"
+            >
+              Related Skills
+            </h3>
+          </header>
+          <div class="my-2.5 last:pb-1.5 print:my-1.5">
+            <ul class="text-md -mr-1.6 -mb-1.6 flex flex-wrap leading-relaxed">
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Agile (Scrum)
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                SEO / Meta
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Accessbility (WCAG)
+              </li>
+              <li
+                class="mr-1.6 mb-1.6 print:border-inset bg-gray-200 px-2.5 text-xs text-gray-700 print:bg-white"
+              >
+                Jira / Atlassian
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End Related Skills -->
+      </section>
+      <!-- End Skills Section -->
+
+      <Projects />
+    </section>
+  </div>
+  {!PDF_VIEW && <Footer />}
+</BaseLayout>

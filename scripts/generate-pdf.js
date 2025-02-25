@@ -6,10 +6,10 @@ const main = async () => {
 
   await page.goto("http://localhost:4321/", { waitUntil: "networkidle" });
 
-  await page.emulateMedia({ media: "screen" });
+  await page.emulateMedia({ media: "print" });
 
   await page.pdf({
-    path: "public/resume.pdf",
+    path: `public/${process.env.RESUME_FILE_NAME || 'resume'}.pdf`,
     margin: { top: "50px", bottom: "80px" },
     printBackground: true,
   });

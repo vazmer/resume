@@ -13,9 +13,9 @@ jobs:
         with:
           node-version-file: ".nvmrc"
 
-      - run: yarn install --frozen-lockfile
+      - run: npm ci
 
-      - run: yarn build
+      - run: npm run build
 
   visual-testing:
     runs-on: ubuntu-latest
@@ -27,24 +27,15 @@ jobs:
         with:
           node-version-file: ".nvmrc"
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn add @percy/cli -D
+      - run: npm ci
+      - run: npm i @percy/cli -D
 
-      - run: mkdir -p theme-dist/light && mkdir -p theme-dist/dark
+      - run: mkdir -p theme-dist
 
-      - run: yarn build:light --base light
+      - run: npm run build
         env:
           NOTION_API_KEY: ${{secrets.NOTION_API_KEY}}
           DATABASE_ID: ${{secrets.DATABASE_ID}}
-
-      - run: cp -R dist/* theme-dist/light
-
-      - run: yarn build:dark --base dark
-        env:
-          NOTION_API_KEY: ${{secrets.NOTION_API_KEY}}
-          DATABASE_ID: ${{secrets.DATABASE_ID}}
-
-      - run: cp -R dist/* theme-dist/dark
 
       - run: npx percy snapshot theme-dist/
         env:

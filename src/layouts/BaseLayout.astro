@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+
+import * as about from "../pages/about/about.md";
+---
+
+<html lang="en" class="print:text-[12px]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Resume about Bojan Vazmer, Software Senior Engineer."
+    />
+    <meta name="author" content={about.frontmatter.name} />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{about.frontmatter.name} CV</title>
+  </head>
+  <body class="print:text-black">
+    <div
+      class="page print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 page print:max-w-letter md:max-w-letter md:h-letter xsm:p-6 mx-auto max-w-2xl max-w-6xl bg-white p-4 p-6 sm:p-6 sm:p-9 md:p-8 md:p-16 print:p-16"
+    >
+      <slot />
+    </div>
+  </body>
+</html>

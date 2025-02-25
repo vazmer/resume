@@ -1,0 +1,14 @@
+---
+import * as about from "../pages/about/about.md";
+
+const getYear = () => new Date().getFullYear().toString();
+---
+
+<footer class="flex items-center justify-center py-4 print:hidden">
+  <p class="text-secondary flex items-center text-center text-xs font-light text-gray-600">
+    &copy; {getYear()} developed by
+    <a target="_blank" class="link ml-1" href={about.frontmatter.github}
+      >{about.frontmatter.name}</a
+    >
+  </p>
+</footer>

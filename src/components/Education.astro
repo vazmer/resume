@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+
+const studies = await getCollection("studies");
+---
+
+<section class="mb-4.5">
+  {
+    studies.map(({ data: study }) => (
+      <header>
+        <h3 class="leading-snugish text-md print:text-sm font-semibold text-gray-700">
+          {study.institute}
+        </h3>
+        <p class="text-gray-600 text-sm leading-normal">{study.location}</p>
+      </header>
+      <p class="mt-2.1 text-sm leading-normal text-gray-800">
+        {study.title}
+      </p>
+    ))
+  }
+</section>

@@ -1,0 +1,99 @@
+---
+import * as about from "../pages/about/about.md";
+import { Icon } from "astro-icon/components";
+
+const { PDF_VIEW, RESUME_FILE_NAME } = import.meta.env;
+---
+
+<section class="mb-6 first:mt-0">
+  <!--<h2 class="text-sm2 text-gray-550 mb-2 font-bold tracking-widest md:mb-0">-->
+  <!--  Contact-->
+  <!--</h2>-->
+
+  <div class="grid grid-cols-2 gap-10">
+    <section class="mb-0">
+      <!-- <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+			</h3> -->
+      <p
+        class="mt-2.1 ml-1.5 text-sm leading-normal text-gray-700 print:mt-1.5"
+      >
+        <span class="-ml-2 text-gray-600 select-none">›</span>
+        Living &amp; residing in <strong>{about.frontmatter.location}</strong>.
+      </p>
+      <p
+        class="mt-2.1 ml-1.5 text-sm leading-normal text-gray-700 print:mt-1.5"
+      >
+        <span class="-ml-2 text-gray-600 select-none">›</span>
+        Available Time Zones: Full overlap EMEA (Europe) &amp; APAC (Europe). Some
+        US / Canada overlap.
+      </p>
+      <p
+        class="mt-2.1 ml-1.5 text-sm leading-normal text-gray-700 print:mt-1.5"
+      >
+        <span class="-ml-2 text-gray-600 select-none">›</span>
+        Fully remote or on-site permanent or contract role on diverse, trusting,
+        and async team.
+      </p>
+    </section>
+
+    <section>
+      <!-- Contact Items -->
+      <ul class="flex list-inside flex-col flex-wrap">
+        <li class="text-md mt-1.5 leading-normal text-gray-700 print:text-sm">
+          <a
+            href={`mailto:${about.frontmatter.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="email" class="h-4 w-4" />
+            {about.frontmatter.email}
+          </a>
+        </li>
+        <li class="text-md mt-1.5 leading-normal text-gray-700 print:text-sm">
+          <a
+            href={about.frontmatter.linkedin}
+            class="group"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="linkedin" class="h-4 w-4" />
+            {about.frontmatter.linkedin}
+            <span
+              class="inline-block font-normal text-gray-500 transition duration-100 ease-in group-hover:text-gray-700 print:text-black"
+              >↗</span
+            >
+          </a>
+        </li>
+        <li class="text-md mt-1.5 leading-normal text-gray-700 print:text-sm">
+          <a
+            href={about.frontmatter.github}
+            class="group"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="github" class="h-4 w-4" />
+            {about.frontmatter.github}
+            <span
+              class="inline-block font-normal text-gray-500 transition duration-100 ease-in group-hover:text-gray-700 print:text-black"
+              >↗</span
+            >
+          </a>
+        </li>
+      </ul>
+      {
+        !PDF_VIEW && (
+          <a
+            download
+            class="group relative me-2 mt-2 inline-flex items-center justify-center overflow-hidden rounded-sm bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-xs font-medium text-gray-900 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:ring-blue-300 focus:outline-none print:hidden"
+            href={`${RESUME_FILE_NAME || 'resume'}.pdf`}
+            rel="noopener noreferrer"
+          >
+            <span class="relative rounded-xs bg-white px-5 py-0.5 transition-all duration-75 ease-in group-hover:bg-transparent">
+              Download CV
+            </span>
+          </a>
+        )
+      }
+    </section>
+  </div>
+</section>

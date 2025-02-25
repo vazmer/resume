@@ -1,0 +1,55 @@
+---
+import { getCollection } from "astro:content";
+import { marked } from "marked";
+import moment from "moment";
+
+const projects = (await getCollection("projects"))
+  .filter(({ data }) => !data.ignore)
+  .sort((a, b) =>
+    !b.data.endDate
+      ? 1
+      : !a.data.endDate
+        ? -1
+        : new Date(b.data.startDate).getTime() -
+          new Date(a.data.endDate).getTime(),
+  );
+---
+
+<section class="mt-8 first:mt-0" id="profile">
+  <h2
+    class="text-sm2 mb-4 font-bold tracking-widest text-purple-700 uppercase print:mb-2"
+  >
+    Projects
+  </h2>
+  {
+    projects.map(({ data: project }) => (
+      <section class="mb-4.5">
+        <header>
+          <h3 class="leading-snugish text-sm font-semibold text-gray-700">
+            {project.title}
+          </h3>
+          <p class="mt-1 text-xs leading-normal text-gray-700">
+            {!project.endDate &&
+              `Since ${moment(project.startDate).format("MMM YYYY")}`}
+            {project.endDate && (
+              <>
+                {moment(project.startDate).format("MMM YYYY")} -
+                {moment(project.endDate).format("MMM YYYY")}
+              </>
+            )}
+          </p>
+        </header>
+        <ul class="list-inside">
+          {project.items.map((item) => (
+            <li class="mt-2.1 ml-1.5 text-sm leading-normal text-gray-700 print:mt-1.5">
+              <span class="-ml-2 text-gray-600 select-none" aria-hidden="true">
+                ›
+              </span>
+              <Fragment set:html={marked.parseInline(item)} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</section>

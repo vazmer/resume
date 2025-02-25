@@ -1,2 +1,8 @@
-/// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
+interface ImportMetaEnv {
+  readonly PDF_VIEW: boolean;
+  readonly RESUME_FILE_NAME?: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}

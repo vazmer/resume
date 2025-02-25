@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+[data-icon] {
+  display: inline-flex;
+}
+
+body {
+  -webkit-print-color-adjust:exact !important;
+  print-color-adjust:exact !important;
+}
+
+@page {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@page :first {
+  margin-top: 0;
+  margin-bottom: 0;
+}

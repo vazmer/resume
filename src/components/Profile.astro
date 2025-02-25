@@ -1,0 +1,15 @@
+---
+import * as about from "../pages/about/about.md";
+---
+
+<section class="mt-8 first:mt-0" id="profile">
+  <h2
+    class="text-sm2 mb-4 font-bold tracking-widest text-purple-700 uppercase print:mb-2"
+  >
+    About Me
+  </h2>
+
+  <section class="mb-0 text-sm leading-normal text-gray-700">
+    <Fragment set:html={about.compiledContent()} />
+  </section>
+</section>

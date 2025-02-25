@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+import { marked } from "marked";
+import moment from "moment/moment";
+
+const works = (await getCollection("works")).sort((a, b) =>
+  !b.data.endDate
+    ? 1
+    : !a.data.endDate
+      ? -1
+      : new Date(b.data.startDate).getTime() -
+        new Date(a.data.endDate).getTime(),
+);
+---
+
+<section class="mt-6 first:mt-0" id="profile">
+  <h2
+    class="text-sm2 mb-4 font-bold tracking-widest text-purple-700 uppercase print:mb-2"
+  >
+    Experience
+  </h2>
+  {
+    works.map(({ data: work }) => (
+      <section class="mb-4.5">
+        <header>
+          <h3 class="leading-snugish text-md font-semibold text-gray-700 print:text-sm">
+            {work.title}
+            <span id="company-name" class="text-gray-500">
+              @ <a href={work.url}>{work.org}</a>
+            </span>
+          </h3>
+          <p class="mt-1 text-sm leading-normal text-gray-700">
+            {!work.endDate && (`Since ${moment(work.startDate).format("MMM YYYY")}`)}
+            {work.endDate && (
+              <>
+                {moment(work.startDate).format("MMM YYYY")} -
+                {moment(work.endDate).format("MMM YYYY")}
+              </>
+            )}
+            - {work.location}
+          </p>
+        </header>
+        <ul class="list-inside">
+          {work.items.map((item) => (
+            <li class="mt-2.1 ml-1.5 text-sm leading-normal text-gray-700 print:mt-1.5">
+              <span class="-ml-2 text-gray-600 select-none" aria-hidden="true">
+                ›
+              </span>
+              <Fragment set:html={marked.parseInline(item)} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</section>
