@@ -31,12 +31,12 @@ const { PDF_VIEW, RESUME_FILE_NAME } = import.meta.env;
         and async team.
       </p>
     </section>
-
     <section>
       <!-- Contact Items -->
       <ul class="flex list-inside flex-col flex-wrap">
         <li class="mt-1.5 text-sm leading-normal text-gray-700 print:text-sm">
           <a
+            class="hover:underline"
             href={`mailto:${about.frontmatter.email}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -48,7 +48,7 @@ const { PDF_VIEW, RESUME_FILE_NAME } = import.meta.env;
         <li class="mt-1.5 text-sm leading-normal text-gray-700 print:text-sm">
           <a
             href={about.frontmatter.linkedin}
-            class="group"
+            class="hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -63,7 +63,7 @@ const { PDF_VIEW, RESUME_FILE_NAME } = import.meta.env;
         <li class="mt-1.5 text-sm leading-normal text-gray-700 print:text-sm">
           <a
             href={about.frontmatter.github}
-            class="group"
+            class="hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >

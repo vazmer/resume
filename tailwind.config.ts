@@ -40,9 +40,9 @@ module.exports = {
         4.5: "1.125rem", // 8px
         11: "2.75rem", // 44px (once)
       },
-      colors: {
-        link: "#fbf3f3",
-      },
+      // colors: {
+      //   link: "#fbf3f3",
+      // },
     },
   },
 

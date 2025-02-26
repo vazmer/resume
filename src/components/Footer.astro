@@ -9,8 +9,10 @@ const getYear = () => new Date().getFullYear().toString();
 <footer class="flex items-center justify-center py-4 print:hidden">
   <p class="text-secondary text-center text-xs font-light text-gray-600">
     &copy; {getYear()} built for fun with Astro and Tailwind by
-    <a target="_blank" class="link" href={REPOSITORY_URL}
-      >{about.frontmatter.name}</a
+    <a
+      target="_blank"
+      class="text-blue-600 hover:underline"
+      href={REPOSITORY_URL}>{about.frontmatter.name}</a
     >
   </p>
 </footer>

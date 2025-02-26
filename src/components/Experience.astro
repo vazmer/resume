@@ -25,12 +25,16 @@ const works = (await getCollection("works")).sort((a, b) =>
         <header>
           <h3 class="leading-snugish text-md font-semibold text-gray-700 print:text-sm">
             {work.title}
-            <span id="company-name" class="text-gray-500">
-              @ <a href={work.url}>{work.org}</a>
+            <span>
+              @
+              <a class="text-gray-500 hover:underline" href={work.url}>
+                {work.org}
+              </a>
             </span>
           </h3>
           <p class="mt-1 text-sm leading-normal text-gray-700">
-            {!work.endDate && (`Since ${moment(work.startDate).format("MMM YYYY")}`)}
+            {!work.endDate &&
+              `Since ${moment(work.startDate).format("MMM YYYY")}`}
             {work.endDate && (
               <>
                 {moment(work.startDate).format("MMM YYYY")} -
