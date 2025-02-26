@@ -34,6 +34,12 @@ Only generate CSS that is used on the page which results in a much smaller file 
 npm run build
 ```
 
+Generate Resume PDF file using Playwright:
+
+```
+npm run generate-pdf:ci
+```
+
 Starting Point
 ---------
 
