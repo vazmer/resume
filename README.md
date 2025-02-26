@@ -5,7 +5,7 @@ This custom resume was built with HTML, [Astro](https://astro.build/), [Tailwind
 
 Check Out My Finished Resume
 --------
-Hosted with Netlify & Mobile Responsive [Bojan Vazmer - Resume](https://bojan-vazmer.netlify.app/)
+Hosted with Netlify & Mobile Responsive [Bojan Vazmer - Resume](https://vazmer.com/)
 
 How to run it
 ---------
