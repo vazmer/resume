@@ -5,16 +5,24 @@ import * as about from "../pages/about/about.md";
 <header
   class="row-gap-5 mb-5 flex flex-row flex-wrap items-center border-b-2 border-gray-400/30 md:mb-2"
 >
-  <div
-    class="mr-5 mb-2 min-w-3 bg-purple-800 px-3 pt-3 pb-3 leading-none font-medium text-white uppercase print:bg-purple-800"
-    aria-hidden="true"
-  >
-    {
-      about.frontmatter.initials.map((initial: string) => (
-        <div class="text-center text-xl">{initial}</div>
-      ))
-    }
+  <div class="mr-5 mb-2 flex justify-center rounded-2xl">
+    <!--<div-->
+    <!--  class="min-w-3 self-center pl-3 leading-none font-medium text-white uppercase"-->
+    <!--  aria-hidden="true"-->
+    <!--&gt;-->
+    <!--  {-->
+    <!--    about.frontmatter.initials.map((initial: string) => (-->
+    <!--      <div class="text-center text-xl">{initial}</div>-->
+    <!--    ))-->
+    <!--  }-->
+    <!--</div>-->
+    <img
+      class="h-20 w-20 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-0.5 hover:from-blue-600 hover:to-purple-800"
+      src="/profile.webp"
+      alt={about.frontmatter.title}
+    />
   </div>
+
   <h1
     class="mr-auto pb-px text-3xl font-semibold text-gray-600 md:text-5xl lg:text-6xl print:text-3xl"
   >

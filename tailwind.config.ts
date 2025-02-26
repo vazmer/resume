@@ -7,7 +7,7 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-       fontSize: {
+      fontSize: {
         sm2: "0.9375rem", // 15px label
         base: "1rem", // 16px base
         md: "1.0625rem", // 17px body
@@ -74,7 +74,6 @@ module.exports = {
       addUtilities(projectSpecificUtils, {
         variants: ["responsive"],
       });
-
     }),
   ],
 };

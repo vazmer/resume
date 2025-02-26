@@ -1,13 +1,15 @@
 ---
 import * as about from "../pages/about/about.md";
 
+const { REPOSITORY_URL } = import.meta.env;
+
 const getYear = () => new Date().getFullYear().toString();
 ---
 
 <footer class="flex items-center justify-center py-4 print:hidden">
-  <p class="text-secondary flex items-center text-center text-xs font-light text-gray-600">
-    &copy; {getYear()} developed by
-    <a target="_blank" class="link ml-1" href={about.frontmatter.github}
+  <p class="text-secondary text-center text-xs font-light text-gray-600">
+    &copy; {getYear()} built for fun with Astro and Tailwind by
+    <a target="_blank" class="link" href={REPOSITORY_URL}
       >{about.frontmatter.name}</a
     >
   </p>
