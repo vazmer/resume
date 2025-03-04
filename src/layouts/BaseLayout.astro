@@ -16,7 +16,9 @@ import * as about from "../pages/about/about.md";
     />
     <meta name="author" content={about.frontmatter.name} />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{about.frontmatter.name} CV</title>
+    <title>
+      {about.frontmatter.name} - {about.frontmatter.industryTitle}
+    </title>
   </head>
   <body class="print:text-black">
     <div
