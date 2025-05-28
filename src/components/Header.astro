@@ -5,9 +5,9 @@ import * as about from "../pages/about/about.md";
 <header
   class="row-gap-5 mb-5 flex flex-row flex-wrap items-center border-b-2 border-gray-400/30 md:mb-2"
 >
-  <div class="mr-5 mb-2 flex justify-center rounded-2xl">
+  <div class="mr-5 mb-2 flex justify-center rounded-2xl max-sm:mr-3">
     <img
-      class="h-20 w-20 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-0.5 hover:from-blue-600 hover:to-purple-800"
+      class="size-20 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 transition delay-150 duration-300 ease-in-out hover:-translate-y-0.5 hover:from-blue-600 hover:to-purple-800 max-sm:size-12"
       src="/profile.webp"
       alt={about.frontmatter.title}
     />
@@ -21,7 +21,7 @@ import * as about from "../pages/about/about.md";
 
   <h2 id="industry-title" class="self-center">
     <code
-      class="pb-px font-sans text-xl font-thin text-purple-700 md:text-2xl print:text-lg"
+      class="pb-px font-sans text-xl font-thin text-purple-700 max-sm:text-lg md:text-2xl print:text-lg"
       role="heading"
       aria-level="1"
       aria-label={about.frontmatter.industryTitle}
