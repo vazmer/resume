@@ -3,8 +3,5 @@
   command = "npm run build"
 
 [[plugins]]
-  package = "netlify-plugin-playwright-cache"
-
-[[plugins]]
   package = "@netlify/plugin-lighthouse"
 
