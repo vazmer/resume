@@ -7,10 +7,10 @@ location: Belgrade, Serbia
 email: vazmer@gmail.com
 linkedin: https://www.linkedin.com/in/bojanvazmer
 github: https://github.com/vazmer
-website: "https://bojan-vazmer.fly.dev/"
+website: "https://vazmer.com"
 ---
 
-With over 12 years of experience specialised in front-end development, bringing a deep expertise in designing and implementing user-centered, innovative web solutions, with a passion for building exceptional user experiences.
+With over 12 years of experience specialised in both front-end and backend development, bringing a deep expertise in designing and implementing user-centered, innovative web solutions, with a passion for building exceptional user experiences.
 
 In my free time I love walking, listening to podcasts, and skiing during winter when there is enough snow.
 
