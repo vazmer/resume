@@ -11,7 +11,5 @@ tags:
   - AngularJS
   - CSS
 items:
-  - "**Lead a team** of 4 developers on creating and maintaining a Contact Centre application developed in AngularJS."
-  - Participated in development of a CCTV web app in AngularJS.
-  - Developed from scratch a web based CMS for fitness platform management.
+  - Led a team of four in developing AngularJS Contact Center and CCTV applications, and built a custom CMS for fitness management from the ground up.
 ---

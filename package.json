@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "scripts": {
     "postinstall": "npx playwright install",
-    "dev": "astro dev",
     "start": "astro dev",
     "generate-pdf": "dotenv -- node ./scripts/generate-pdf.js",
     "generate-pdf:ci": "PDF_VIEW=true start-server-and-test http://localhost:4321 generate-pdf",
@@ -31,7 +30,7 @@
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/netlify": "^6.3.4",
     "@tailwindcss/vite": "^4.1.8",
-    "astro": "^5.8.0",
+    "astro": "^6.0.4",
     "marked": "^15.0.12",
     "moment": "^2.30.1"
   }

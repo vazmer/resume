@@ -11,7 +11,5 @@ tags:
   - PHP
   - MySQL
 items:
-  - Worked closely with UX team on creating a common re-usable CSS theme and JS code for e-shop web applications. Parts of it are used to this date.
-  - Played an important role in creating multiple e-shop applications with high traffic such as [PlanetaSport](https://planetasport.rs), [SportVision](https://www.sportvision.rs/), and [DecjiSajt.rs](https://www.decjisajt.rs).
-  - Developed and maintained a CMS for supply chain management for [Vlasina Water](https://www.vlasinawater.com).
+  - Developed high-traffic e-commerce platforms and supply chain CMS solutions using JS, SASS, and WordPress, focusing on reusable CSS themes and modern build tools.
 ---
