@@ -6,9 +6,9 @@ url: https://www.instagram.com/aetiusmedia/
 location: Remote
 org: Aetius Media
 tags:
-  - Wordpress
+  - WordPress
   - CSS
   - PHP
 items:
-  - Development and maintenance of a Wordpress sites using Git, SASS, Gulp, Bower etc., following the best practices in WP development.
+  - Developed and maintained WordPress sites with a focus on clean architecture, maintainability, and WordPress best practices.
 ---

@@ -11,5 +11,5 @@ tags:
   - PHP
   - MySQL
 items:
-  - Developed high-traffic e-commerce platforms and supply chain CMS solutions using JS, SASS, and WordPress, focusing on reusable CSS themes and modern build tools.
+  - Developed high-traffic e-commerce platforms and supply chain CMS solutions, focusing on reusable UI components and scalable implementation across multiple websites.
 ---

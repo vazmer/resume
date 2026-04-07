@@ -11,7 +11,7 @@ tags:
   - Redux
   - Widget Framework
 items:
-  - Architected a multi-channel Contact Center desktop client using Angular and Redux, supporting millions of users across Voice, SMS, and Video.
+  - Architected a multichannel Contact Center desktop client using Angular and Redux, supporting millions of users across Voice, SMS, and Video.
   - Developed a React-based real-time reporting application and a custom Widget Framework for flexible UI functionality.
   - Built accessible, high-traffic interfaces following WCAG 2.0 standards to ensure functional compliance for all users.
 ---

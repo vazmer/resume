@@ -12,8 +12,7 @@ tags:
   - RxDb
   - 3D Imaging
 items:
-  - "RFX Mendoza Questionnaire System: Developed a sophisticated, metadata-driven React questionnaire engine designed for structured data collection."
-  - Implemented dynamic form rendering based on real-time API schemas with complex branching logic.
-  - "Medical Imaging Platform (Tomoverse): Architected a high-performance clinical platform using Angular, NestJS, and Nx, featuring a Cornerstone3D viewer for browser-based DICOM analysis."
-  - "Advanced Visualization: Engineered complex MPR (Multiplanar Reconstruction) and synchronized orthogonal viewports, utilizing Web Workers for background image processing and memory optimization."
+  - "RFX Mendoza Questionnaire System: Built a metadata-driven questionnaire engine in React using hooks, Redux, and React Query to manage structured data collection and API-driven state, while implementing dynamic form rendering from real-time API schemas with complex branching logic and reusable form components for scalable questionnaire flows."
+  - "Medical Imaging Platform (Tomoverse): Architected a high-performance clinical platform using Angular, NestJS, Nx, and Electron, leveraging modern Angular features such as Signals and Reactive Forms, with a Cornerstone3D viewer for browser-based DICOM analysis and local-first capabilities powered by RxDB."
+  - "Advanced Visualization: Built complex MPR workflows and synchronized orthogonal viewports, using modern Angular patterns, Web Workers, and memory optimizations for smooth medical imaging performance."
 ---
